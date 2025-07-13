@@ -35,7 +35,7 @@ export default function Profile() {
       });
       const data = await res.json();
       alert(data.message || "Marked as completed!");
-      fetchProfile(); 
+      fetchProfile();
     } catch (err) {
       console.error(err);
       alert("Error completing course");
@@ -49,51 +49,57 @@ export default function Profile() {
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Profile</h1>
       <div className="bg-white/80 rounded-lg shadow p-6 mb-8">
-      <p><strong>Name:</strong> {profile.name}</p>
-      <p><strong>Email:</strong> {profile.email}</p>
-    </div>
-    <hr className="my-6 border-t-2 border-blue-200" />
+        <p><strong>Name:</strong> {profile.name}</p>
+        <p><strong>Email:</strong> {profile.email}</p>
+      </div>
+      <hr className="my-6 border-t-2 border-blue-200" />
 
-      <h2 className="text-xl mt-6 mb-2 justify-between">Started Courses</h2>
-<div className="max-w-xs">
-  <ul>
-    {profile.startedCourses.length === 0 ? (
-      <li className="text-gray-500 italic">No started courses yet.</li>
-    ) : (
-      profile.startedCourses.map(course => (
-        <li key={course._id} className="flex items-center mb-2 gap-x-4 justify-between">
-          <span className="max-w-xs truncate">{course.name}</span>
-          <button
-            onClick={() => handleCompleteCourse(course._id)}
-            className="bg-blue-600 text-white px-3 py-1 rounded"
-          >
-            Mark as Completed
-          </button>
-        </li>
-      ))
-    )}
-  </ul>
-</div>
+      <h2 className="text-xl mt-6 mb-2">Started Courses</h2>
+      <div className="max-w-11/16">
+        <ul>
+          {profile.startedCourses.length === 0 ? (
+            <li className="text-gray-500 italic">No started courses yet.</li>
+          ) : (
+            profile.startedCourses.map(course => (
+              <li
+                key={course._id}
+                className="flex items-center mb-2 gap-x-4 "
+              >
+                <span className="flex-1 truncate">{course.name}</span>
+                <button
+                  onClick={() => handleCompleteCourse(course._id)}
+                  className="w-32 h-10 bg-blue-600 text-white rounded text-center text-sm"
+                >
+                  Mark as Completed
+                </button>
+              </li>
+            ))
+          )}
+        </ul>
+      </div>
       <h2 className="text-xl mt-6 mb-2 ">Completed Courses</h2>
-<div className="max-w-xs">
-  <ul>
-    {profile.completedCourses.length === 0 ? (
-      <li className="text-gray-500 italic">No completed courses yet.</li>
-    ) : (
-      profile.completedCourses.map(course => (
-        <li key={course._id} className="flex items-center mb-2 gap-x-4 justify-between">
-          <span className="max-w-xs truncate">{course.name}</span>
-          <button
-            onClick={() => navigate(`/test/${course._id}`)}
-            className="bg-green-600 text-white px-3 py-1 rounded"
-          >
-            Take Test
-          </button>
-        </li>
-      ))
-    )}
-  </ul>
-</div>
+      <div className="max-w-11/16">
+        <ul>
+          {profile.completedCourses.length === 0 ? (
+            <li className="text-gray-500 italic">No completed courses yet.</li>
+          ) : (
+            profile.completedCourses.map(course => (
+              <li
+                key={course._id}
+                className="flex items-center mb-2 gap-x-4 "
+              >
+                <span className="flex-1 truncate ">{course.name}</span>
+                <button
+                  onClick={() => navigate(`/test/${course._id}`)}
+                  className="w-32 h-8 bg-green-600 text-white rounded text-center"
+                >
+                  Take Test
+                </button>
+              </li>
+            ))
+          )}
+        </ul>
+      </div>
     </div>
   );
 }
