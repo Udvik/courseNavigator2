@@ -1,51 +1,71 @@
+# 🧭 CourseNavigator
 
-Project Link: https://udvik.github.io/courseNavigator2/
+A **skill-based learning platform** built using the **MERN stack**, helping users learn technical skills through curated resources, tests, and progress tracking.
 
+---
 
-🧭 CourseNavigator
-A skill-based learning platform built with the MERN stack that helps users navigate, track, and test their progress across various technical skills.
+## 🔗 Live Demo
 
-🚀 Features
-🧑‍💻 User Features
-🔍 Skill Cards: Browse and search skills like DSA, Web Dev, DBMS, etc.
-📚 Curated Courses: View high-quality YouTube/tutorial links under each skill.
-✅ Progress Tracking: Mark courses as started or completed.
+🌐 [Click here to explore CourseNavigator](https://your-live-link.com)
 
-🧾 User Profile:
-View started/completed courses
-See test scores and improvement over time
+---
 
-🔐 Admin Features
-🔓 Admin Login
-➕ Add or update skills
-🎥 Add or update course links under skills
-📊 Monitor user count and manage permissions
+## 🚀 Features
 
-🛠️ Tech Stack
-Tech	Usage
-MongoDB	Database for users, skills, tests
-Express.js	Backend API and routes
-React.js	Frontend UI and components
-Node.js	Backend server
-Tailwind CSS	Styling and responsiveness
-JWT	Secure user authentication
+### 🧑‍💻 User Side
+- 🔍 Browse and search for skills like DSA, Web Dev, DBMS, OS, CN, etc.
+- 📚 View hand-picked courses (YouTube/tutorials) under each skill.
+- ✅ Track course progress: Start, Complete, Resume.
+- 🧪 Take quizzes/tests under each skill to evaluate understanding.
+- 📊 View a skill-wise proficiency bar based on test scores.
+- 👤 Profile dashboard with course/test history.
 
+### 🔐 Admin Side
+- 🔓 Secure login for admin access.
+- ➕ Add/edit skills and related courses.
+- 📥 Manage all user activities and permissions.
+- 📈 Dashboard showing platform usage (optional future feature).
 
-📸 Demo Credentials
-Role	               Email	                  Password
-User	             user@example.com	           user
-Admin	             admin@gmail.com	           admin
+---
 
-✨ Screenshots
-Add screenshots here: Skill cards, Profile page, Admin dashboard, Test result UI, etc.
+## 🛠️ Tech Stack
 
-📌 Future Enhancements
-📊 Analytics dashboard for admin
-📱 Mobile responsiveness
-📝 Rich test editor (MCQs, code-based)
-🎖️ Leaderboards for top learners
-🤝 Contributing
+- **MongoDB** – NoSQL Database
+- **Express.js** – Backend Framework
+- **React.js** – Frontend Library
+- **Node.js** – Server Runtime
+- **Tailwind CSS** – Modern styling
+- **JWT** – User Authentication
 
+---
 
-Feel free to connect for suggestions or collaborations!
-Email : udvik4321@gmail.com
+## 🎓 Demo Credentials
+
+| Role   | Email              | Password |
+|--------|--------------------|----------|
+| User   | user@example.com   | user     |
+| Admin  | admin@gmail.com    | admin    |
+
+---
+
+## 🧠 Future Scope
+
+- 🧾 Add MCQ + coding test support
+- 📊 Admin analytics dashboard
+- 🔔 Notifications and reminders
+- 🎖️ Leaderboard & gamification
+- 📱 Fully mobile-optimized design
+
+---
+
+## ✨ About the Project
+
+CourseNavigator is designed for students and self-learners who want structured learning with measurable progress. It's ideal for those preparing for placements, internships, or skill-based certifications.
+
+---
+
+## 📬 Contact
+
+Made with ❤️ by **Udvik Konduru**  
+[GitHub](https://github.com/udvik) • [LinkedIn](https://www.linkedin.com/in/udvik-konduru-919011269/)
+
