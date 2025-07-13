@@ -14,7 +14,7 @@ import Alert from "./components/Alert";
 function App() {
   const location = useLocation();
   
-  const hideNavbarOn = ["/login", "/signup" , "/"];
+  const hideNavbarOn = ["/login", "/signup" , "/home"];
   return (
     <>
     {<Alert />}
