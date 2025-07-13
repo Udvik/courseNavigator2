@@ -54,7 +54,7 @@ export default function Profile() {
       </div>
       <hr className="my-6 border-t-2 border-blue-200" />
 
-      <h2 className="text-xl mt-6 mb-2">Started Courses</h2>
+      <h2 className="text-xl font-semibold mb-4 mt-8 pl-3 py-1 border-l-4 border-blue-500 bg-blue-50 text-blue-800 rounded">Started Courses</h2>
       <div className="max-w-11/16">
         <ul>
           {profile.startedCourses.length === 0 ? (
@@ -77,8 +77,9 @@ export default function Profile() {
           )}
         </ul>
       </div>
-      <h2 className="text-xl mt-6 mb-2 ">Completed Courses</h2>
-      <div className="max-w-11/16">
+      <h2 className="text-xl font-semibold mb-4 mt-8 pl-3 py-1 border-l-4 border-green-500 bg-green-50 text-green-800 rounded">
+        Completed Courses
+      </h2>      <div className="max-w-11/16">
         <ul>
           {profile.completedCourses.length === 0 ? (
             <li className="text-gray-500 italic">No completed courses yet.</li>
