@@ -8,13 +8,16 @@ import AddCourse from './pages/AddCourse';
 import Profile from "./pages/Profile";
 import Navbar from './components/Navbar';
 import AddSkill from "./pages/AddSkill";
+import Alert from "./components/Alert";
 
 
 function App() {
   const location = useLocation();
+  
   const hideNavbarOn = ["/login", "/signup" , "/"];
   return (
     <>
+    {<Alert />}
       {!hideNavbarOn.includes(location.pathname) && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />

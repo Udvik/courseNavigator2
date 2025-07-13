@@ -36,6 +36,19 @@ export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center  p-6 "
     style={{backgroundColor: "#1e293b"}}>
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 bg-blue-100 border border-blue-300 rounded-lg shadow px-6 py-4 mb-6 w-full max-w-md text-sm text-gray-800">
+      <div className="mb-2 font-semibold text-blue-900">Demo Credentials</div>
+      <div className="mb-1">
+        <span className="font-medium">User:</span> <br />
+        Email: <span className="font-mono">user@example.com</span> <br />
+        Password: <span className="font-mono">user</span>
+      </div>
+      <div>
+        <span className="font-medium">Admin:</span> <br />
+        Email: <span className="font-mono">admin@gmail.com</span> <br />
+        Password: <span className="font-mono">admin</span>
+      </div>
+    </div>
       <form
         onSubmit={handleLogin}
         className=" bg-white backdrop-blur-lg p-8 rounded-2xl shadow-xl ring-1  space-y-6 animate-fade-in"

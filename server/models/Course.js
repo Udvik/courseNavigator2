@@ -19,6 +19,8 @@ const courseSchema = new mongoose.Schema({
       "NPTEL",
       "Infosys Springboard",
       "W3Schools",
+      "Udemy",
+      "Udacity",
     ],
     required: true,
   },

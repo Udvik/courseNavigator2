@@ -40,11 +40,11 @@ export default function AddCourse() {
   };
 
   return (
-    <div className="min-h-screen p-6 bg-black text-white">
+    <div className="min-h-screen p-6 bg-white text-black">
       <h2 className="text-2xl font-bold mb-6">Admin – Add Course</h2>
       <form
         onSubmit={handleSubmit}
-        className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-black p-6 rounded shadow"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white p-6 rounded shadow"
       >
         <select
           name="skillId"
@@ -81,7 +81,7 @@ export default function AddCourse() {
           name="category"
           value={form.category}
           onChange={handleChange}
-          className="border p-2 rounded"
+          className="border p-2 rounded bg-white text-black"
         >
           <option>YouTube</option>
           <option>Coursera</option>
@@ -89,6 +89,9 @@ export default function AddCourse() {
           <option>NPTEL</option>
           <option>Infosys Springboard</option>
           <option>W3Schools</option>
+          <option >Udemy</option>
+          <option >Udacity</option>
+          
         </select>
 
         <input

@@ -168,12 +168,26 @@ export default function SkillPage() {
           filtered.map((c, i) => (
             <div key={i} className="bg-white border border-gray-200 p-4 rounded-lg shadow-sm space-y-2">
   <h3 className="text-lg font-semibold text-blue-700">{c.name}</h3>
-  <p className="text-sm text-gray-700">
-    {c.category} • {c.duration} hrs • {c.language}
-  </p>
-  <p className="text-sm text-gray-600">
-    Price: {c.price} • Rating: ⭐ {c.rating} • Certification: {c.certification ? "Yes" : "No"}
-  </p>
+  <div className="flex flex-wrap gap-2 mb-1">
+  <span className="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
+    {c.category}
+  </span>
+  <span className="inline-block bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
+    {c.duration} hrs
+  </span>
+  <span className="inline-block bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded">
+    {c.language}
+  </span>
+  <span className="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-1 rounded">
+    ⭐ {c.rating}
+  </span>
+  <span className={`inline-block ${c.certification ? "bg-emerald-100 text-emerald-700" : "bg-gray-200 text-gray-500"} text-xs px-2 py-1 rounded`}>
+    {c.certification ? "Certification" : "No Certification"}
+  </span>
+  <span className={`inline-block bg-pink-100 text-pink-700 text-xs px-2 py-1 rounded`}>
+    {c.price}
+  </span>
+</div>
   <div className="flex items-center gap-4 mt-2">
     <a
       href={c.link}
