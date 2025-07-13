@@ -166,29 +166,31 @@ export default function SkillPage() {
           <p className="col-span-full text-gray-600">No courses match the selected filters.</p>
         ) : (
           filtered.map((c, i) => (
-            <div key={i} className="bg-black p-4 rounded shadow">
-              <h3 className="text-lg font-semibold text-blue-600">{c.name}</h3>
-              <p className="text-sm text-gray-600">
-                {c.category} • {c.duration} hrs • {c.language}
-              </p>
-              <p className="text-sm">
-                Price: {c.price} • Rating: ⭐ {c.rating} • Certification:{" "}
-                {c.certification ? "Yes" : "No"}
-              </p>
-              <a
-                href={c.link}
-                target="_blank"
-                className="text-blue-500 underline"
-              >
-                View Course →
-              </a>
-              <button
-                onClick={() => handleStartCourse(c._id)}
-                className="mt-3 bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700"
-              >
-                Start Course
-              </button>
-            </div>
+            <div key={i} className="bg-white border border-gray-200 p-4 rounded-lg shadow-sm space-y-2">
+  <h3 className="text-lg font-semibold text-blue-700">{c.name}</h3>
+  <p className="text-sm text-gray-700">
+    {c.category} • {c.duration} hrs • {c.language}
+  </p>
+  <p className="text-sm text-gray-600">
+    Price: {c.price} • Rating: ⭐ {c.rating} • Certification: {c.certification ? "Yes" : "No"}
+  </p>
+  <div className="flex items-center gap-4 mt-2">
+    <a
+      href={c.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-500 underline text-sm"
+    >
+      View Course →
+    </a>
+    <button
+      onClick={() => handleStartCourse(c._id)}
+      className="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 text-sm"
+    >
+      Start Course
+    </button>
+  </div>
+</div>
           ))
         )}
       </div>
