@@ -34,66 +34,70 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center  p-6 "
-    style={{backgroundColor: "#1e293b"}}>
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 bg-blue-100 border border-blue-300 rounded-lg shadow px-6 py-4 mb-6 w-full max-w-md text-sm text-gray-800">
-      <div className="mb-2 font-semibold text-blue-900">Demo Credentials</div>
-      <div className="mb-1">
-        <span className="font-medium">User:</span> <br />
-        Email: <span className="font-mono">user@example.com</span> <br />
-        Password: <span className="font-mono">user</span>
-      </div>
-      <div>
-        <span className="font-medium">Admin:</span> <br />
-        Email: <span className="font-mono">admin@gmail.com</span> <br />
-        Password: <span className="font-mono">admin</span>
-      </div>
+    <div
+  className="min-h-screen flex flex-col items-center justify-center p-6 space-y-6"
+  style={{ backgroundColor: "#1e293b" }}
+>
+  {/* Demo Credentials */}
+  <div className="bg-blue-100 border border-blue-300 rounded px-6 py-5 text-sm text-gray-800 w-full max-w-sm shadow">
+    <div className="font-semibold text-blue-900 mb-3">Demo Credentials</div>
+    <div className="mb-4">
+      <strong>User</strong><br />
+      Email: <code>user@example.com</code><br />
+      Password: <code>user</code>
     </div>
-      <form
-        onSubmit={handleLogin}
-        className=" bg-white backdrop-blur-lg p-8 rounded-2xl shadow-xl ring-1  space-y-6 animate-fade-in"
+    <div>
+      <strong>Admin</strong><br />
+      Email: <code>admin@gmail.com</code><br />
+      Password: <code>admin</code>
+    </div>
+  </div>
+
+  {/* Login Form */}
+  <form
+    onSubmit={handleLogin}
+    className="bg-white backdrop-blur-lg p-8 rounded-2xl shadow-xl ring-1 space-y-6 animate-fade-in max-w-sm w-full"
+  >
+    <h2 className="text-3xl font-extrabold text-black text-center tracking-tight">
+      Welcome Back
+    </h2>
+
+    <div className="space-y-4">
+      <input
+        type="email"
+        placeholder="Email"
+        className="w-full p-2 border rounded"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        className="w-full p-2 border rounded"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        required
+      />
+    </div>
+
+    <div className="space-y-4">
+      <button
+        type="submit"
+        className="w-full py-3 font-semibold rounded-lg bg-indigo-700 text-white"
       >
-        <h2 className="text-3xl font-extrabold text-black text-center tracking-tight">
-          Welcome Back
-        </h2>
-
-        <div className="space-y-4">
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full p-2 mb-4 border rounded items-center"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-
-          <input
-            type="password"
-            placeholder="Password"
-            className="w-full p-2 mb-4 border rounded items-center"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-
-        <div className="space-y-4">
-          <button
-            type="submit"
-            className="w-full py-3 font-semibold rounded-lg bg-indigo-700 text-white"
-          >
-            Log In
-          </button>
-
-          <button
-            type="button"
-            onClick={() => navigate("/signup")}
-            className="w-full py-3 font-medium rounded-lg bg-transparent border-2 border-indigo-400 text-indigo-600 "
-          >
-            New here? Sign Up
-          </button>
-        </div>
-      </form>
+        Log In
+      </button>
+      <button
+        type="button"
+        onClick={() => navigate("/signup")}
+        className="w-full py-3 font-medium rounded-lg bg-transparent border-2 border-indigo-400 text-indigo-600"
+      >
+        New here? Sign Up
+      </button>
     </div>
+  </form>
+</div>
+
   );
 }
