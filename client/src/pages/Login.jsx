@@ -40,12 +40,7 @@ export default function Login() {
 >
   {/* Demo Credentials */}
   <div className="bg-blue-100 border border-blue-300 rounded px-6 py-5 text-sm text-gray-800 w-full max-w-sm shadow">
-    <div className="font-semibold text-blue-900 mb-3">Demo Credentials</div>
-    <div className="mb-4">
-      <strong>User</strong><br />
-      Email: <code>user@example.com</code><br />
-      Password: <code>user</code>
-    </div>
+    <div className="font-semibold text-blue-900 mb-3">Demo Admin Credentials</div>
     <div>
       <strong>Admin</strong><br />
       Email: <code>admin@gmail.com</code><br />
