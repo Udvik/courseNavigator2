@@ -6,7 +6,7 @@ A **skill-based learning platform** built using the **MERN stack**, helping user
 
 ## 🔗 Live Demo
 
-🌐 [Click here to explore CourseNavigator](https://your-live-link.com)
+🌐 [Click here to explore CourseNavigator](https://udvik.github.io/courseNavigator2/)
 
 ---
 
