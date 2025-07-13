@@ -27,7 +27,7 @@ export default function Navbar({ onSearch }) {
     style={{backgroundColor: "#FFCED6"}}>
       <h1
         className="text-2xl font-bold text-black cursor-pointer"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/home")}
       >
         CourseNavigator
       </h1>

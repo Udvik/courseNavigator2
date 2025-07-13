@@ -19,10 +19,10 @@ export default function Login() {
     if (data.name != null) {
       if (data.isAdmin) {
         localStorage.setItem("isAdmin", true);
-        navigate("/");
+        navigate("/home");
       } else {
         localStorage.setItem("isAdmin", false);
-        navigate("/");
+        navigate("/home");
       }
       localStorage.setItem("userName", data.name);
       localStorage.setItem("userEmail", email);

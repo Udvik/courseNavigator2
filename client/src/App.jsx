@@ -21,6 +21,7 @@ function App() {
       {!hideNavbarOn.includes(location.pathname) && <Navbar />}
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/skill/:id" element={<SkillPage />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/add-skill" element={<AddSkill />} />
