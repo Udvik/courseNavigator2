@@ -2,13 +2,6 @@
 
 A **skill-based learning platform** built using the **MERN stack**, helping users learn technical skills through curated resources, tests, and progress tracking.
 
----
-
-## 🔗 Live Demo
-
-🌐 [Click here to explore CourseNavigator](https://udvik.github.io/courseNavigator2/)
-
----
 
 ## 🚀 Features
 
