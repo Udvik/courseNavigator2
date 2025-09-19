@@ -10,14 +10,7 @@ const userSchema = new mongoose.Schema({
   startedCourses: [{ type: mongoose.Schema.Types.ObjectId, ref: "Course" }],
   completedCourses: [{ type: mongoose.Schema.Types.ObjectId, ref: "Course" }],
 
-  skillProficiency: {
-    type: Map,
-    of: {
-      totalAttempted: { type: Number, default: 0 },
-      totalCorrect: { type: Number, default: 0 },
-    },
-    default: {},
-  }
+  
 });
 
 export default mongoose.model("User", userSchema);
